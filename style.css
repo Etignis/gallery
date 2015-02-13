@@ -1,0 +1,95 @@
+@charset "windows-1251";
+/* CSS Document */
+<!--
+/*--------------[Общий фон]--------------*/
+body {
+	margin: 0px;
+    color: #290101;	
+	width: 100%;
+	height: 100%;
+	/*min-width: 900px;*/
+	font-family: arial, verdana, sans-serif;
+}
+/*--------[Основная разметка блоков]------------*/
+
+.photo{
+    margin: 5px;
+	padding: 5px;
+	border: #bbb solid 5px;
+}
+#g_fon{
+    width: 100%;
+    height:100%;
+    position: fixed;
+    background: rgba(2,2,2,0.5);
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    display:none;
+	overflow-y: auto;
+}
+#g_pos{
+    position: absolute;
+    top: 50%; left: 50%;
+	z-index: 9;
+	/*border: #000 solid 1px;*/
+}
+#g_frame{
+    background: #ddd;
+	border: #bbb solid 2px;
+	border-radius: 3px;
+	 -webkit-border-radius: 3px;
+	 -moz-border-radius: 3px;
+	/*position: absolute;
+	/*position: relative;*/
+	/*z-index: 999999;*/
+    /*top: 50%; left: 50%;*/
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+	/*overflow: auto;*/
+}
+#g_img{
+    margin:5px 5px 0px 5px;
+	border: #bbb solid 1px;
+}
+#g_f_title{
+    margin: 0px 5px 5px 5px;
+   /* border: #222 solid 2px;*/
+	font-size: 12px;
+	color: #555;
+}
+span.g_p_title{
+    display:none;
+}
+#g_close{
+    position: fixed;
+	width: 30px;
+	height: 30px;
+	float: right;
+	background: #333;
+	z-index: 99999999;
+	top: 0px;
+}
+#g_space{
+    height: 20px;
+	border: #000 solid 1px;
+}
+#g_prev{
+    position: fixed;
+	top:0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	/*border: #000 solid 1px;*/
+	z-index: 2;
+	color: #ddd;
+	font-size: 100px;
+}
+.no_select {
+user-select: none;
+-o-user-select: none;
+-moz-user-select: none;
+-khtml-user-select: none;
+}
+-->
