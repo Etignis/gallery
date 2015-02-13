@@ -1,16 +1,4 @@
-@charset "windows-1251";
-/* CSS Document */
-<!--
-/*--------------[Общий фон]--------------*/
-body {
-	margin: 0px;
-    color: #290101;	
-	width: 100%;
-	height: 100%;
-	/*min-width: 900px;*/
-	font-family: arial, verdana, sans-serif;
-}
-/*--------[Основная разметка блоков]------------*/
+/*--------[основная разметка блоков]------------*/
 
 .photo{
     margin: 5px;
@@ -27,6 +15,7 @@ body {
     z-index: 10;
     display:none;
 	overflow-y: auto;
+	cursor: pointer;
 }
 #g_pos{
     position: absolute;
@@ -35,29 +24,26 @@ body {
 	/*border: #000 solid 1px;*/
 }
 #g_frame{
-    background: #ddd;
-	border: #bbb solid 2px;
-	border-radius: 3px;
-	 -webkit-border-radius: 3px;
-	 -moz-border-radius: 3px;
-	/*position: absolute;
-	/*position: relative;*/
-	/*z-index: 999999;*/
-    /*top: 50%; left: 50%;*/
-	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
-	/*overflow: auto;*/
+    background: #fff;
+	border: none;
+	border-radius: 3px;	
+    box-shadow: 0 0 6px rgba(0,0,0,0.6); /* Параметры тени */
+	
 }
 #g_img{
-    margin:5px 5px 0px 5px;
-	border: #bbb solid 1px;
+    margin:0;
+	border: none;
+	border-radius: 3px 3px 0 0;	
+	cursor: pointer;
 }
 #g_f_title{
-    margin: 0px 5px 5px 5px;
-   /* border: #222 solid 2px;*/
+    padding: 0.2em;
 	font-size: 12px;
 	color: #555;
+	box-sizing: border-box;
+}
+.g_i_num{
+	color: #999;
 }
 span.g_p_title{
     display:none;
@@ -85,11 +71,39 @@ span.g_p_title{
 	z-index: 2;
 	color: #ddd;
 	font-size: 100px;
+	cursor: pointer;
 }
+#g_close_cross{
+	position: absolute;
+	right: 0px;
+	top: 0px;	
+	color: rgba(255,255,255,0.3);
+	transition: color 0.4s ease 0;
+	font-size: 40px;
+	z-index: 99999999999;
+	cursor: pointer;
+	padding: 3px 0.2em;
+	margin: 0;
+	text-shadow: 0 0 5px  rgba(0,0,0,0.8);
+}
+#g_close_cross:hover{
+	color: rgba(250,250,250,0.9);
+}
+#g_prev_but{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0.8;
+	color: #333;
+	font-size: 80px;
+	z-index: 99999999999;
+	cursor: pointer;
+	padding: 3px;
+}
+
 .no_select {
 user-select: none;
 -o-user-select: none;
 -moz-user-select: none;
 -khtml-user-select: none;
 }
--->

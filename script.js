@@ -11,7 +11,6 @@ $(document).ready(function(){
    
    //alert(KolMin);
  $('.photo').live('click', function(){ // нажатие на миниатюру
- //$('a.g_photo').live('click', function(){ // нажатие на миниатюру
   if((!$('div#g_fon').length)&&(!$('dix#g_frame').length))
    {  
    $('body').css('overflow', 'hidden'); // типа хорошо
