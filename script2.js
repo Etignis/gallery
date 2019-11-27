@@ -1,4 +1,4 @@
-$(document).ready(function(){  
+//$(document).ready(function(){  
 var NoImg;
 var KolMin;
 /*/
@@ -12,6 +12,65 @@ IMAGE = "Pic";
 PREV  = "Prev";
 NEXT  = "Next";
 CLOSE = "Close";
+
+class Gallery {
+  constructor(sGalleryName) {
+		if(!sGalleryName) {
+			console.error("No gallery name in constructor!");
+			return;
+		}
+    this.name = sGalleryName;
+		let aImgsA = document.querySelectorAll(`[data-gal="${this.name}"]`);
+		this.length = aImgsA.length;
+		
+		this.images = [];
+		for (let i=0; i< this.length; i++) {
+			this.images[i] = new Image();
+			this.images[i].src = aImgsA[i].getElementsByTagName('img')[0].src;
+		}
+  }
+	
+	_openModal() {
+		if(!this.Modal) {
+
+			let oElem = document.createElement("div");
+			oElem.className = 'no_select hide';
+			oElem.id = 'g_fon';
+			oElem.innerHTML ="<div id='g_pos' class='no_select'><div id='g_frame' class='no_select'><div id='g_close_cross' title='"+CLOSE+"'>&times;</div></div></div>"
+
+			this.Modal = oElem;
+			document.body.append(this.Modal);
+		}
+		
+		this.Modal.classList.remove("hide");
+	}
+	_closeModal(){
+		this.Modal.classList.add("hide");
+	}
+	
+	_showPhoto(nIndex) {
+		this.Modal.querySelector("img")
+	}
+	
+	open(nIndex){
+		this._openModal();
+		this._showPhoto(nIndex);
+	}
+	
+	close() {
+		this._closeModal();
+	}
+	
+	next() {
+		
+	}
+	
+	prev(){
+		
+	}
+	
+	
+}
 
    var win_w = $(document).width();
    var win_h = $(document).height();
@@ -156,4 +215,4 @@ function close()
 function strip_tags( str ){ 
     return str.replace(/<\/?[^>]+>/gi, '');
 } 
-});
+//});
